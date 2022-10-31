@@ -1,52 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
- 
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Calculator</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
- 
+
 <body>
- 
-        <table class="calculator" >
-        <tr>
-            <td colspan="3"> <input class="display-box" type="text" id="result" disabled /> </td>
-        
-            <!-- clearScreen() function clears all the values -->
-            <td> <input type="button" value="C" onclick="clearScreen()" id="btn" /> </td>
-        </tr>
-        <tr>
-            <!-- display() function displays the value of clicked button -->
-            <td> <input type="button" value="1" onclick="display('1')" /> </td>
-            <td> <input type="button" value="2" onclick="display('2')" /> </td>
-            <td> <input type="button" value="3" onclick="display('3')" /> </td>
-            <td> <input type="button" value="/" onclick="display('/')" /> </td>
-        </tr>
-        <tr>
-            <td> <input type="button" value="4" onclick="display('4')" /> </td>
-            <td> <input type="button" value="5" onclick="display('5')" /> </td>
-            <td> <input type="button" value="6" onclick="display('6')" /> </td>
-            <td> <input type="button" value="-" onclick="display('-')" /> </td>
-        </tr>
-        <tr>
-            <td> <input type="button" value="7" onclick="display('7')" /> </td>
-            <td> <input type="button" value="8" onclick="display('8')" /> </td>
-            <td> <input type="button" value="9" onclick="display('9')" /> </td>
-            <td> <input type="button" value="+" onclick="display('+')" /> </td>
-        </tr>
-        <tr>
-            <td> <input type="button" value="." onclick="display('.')" /> </td>
-            <td> <input type="button" value="0" onclick="display('0')" /> </td>
-        
-            <!-- calculate() function evaluates the mathematical expression -->
-            <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
-            <td> <input type="button" value="*" onclick="display('*')" /> </td>
-        </tr>
-        </table>
-        
-<script type="text/javascript" src="script.js"></script>
- 
+    <div class="box">
+        <h1><u>Student Registration Form</u></h1>
+        <div class="container">
+            <div class="form">
+                <h2>Form</h2>
+                <form>
+                    <div class="name">
+                        <label for="name">Name :</label>
+                        <input type="text" id="name" placeholder="ex.xyz" required>
+                    </div>
+                    <div class="email">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" placeholder="ex. abc@xyz.com" required>
+                    </div>
+                    <div class="website">
+                        <label for="website">Website :</label>
+                        <input type="url" id="website" placeholder="ex. xyz.com" required>
+                    </div>
+                    <div class="image">
+                        <label for="url">Image URL: <span>(jpg,png etc.format)</span></label>
+                        <input type="url" id="url" placeholder="ex. https://xyz.jpg"
+                            value="https://st.depositphotos.com/2101611/3923/v/450/depositphotos_39238767-stock-illustration-businessman-avatar-profile-picture.jpg"
+                            required>
+                    </div>
+                    <div class="gender">
+                        <label for="gender">Gender: </label>
+                        <input type="radio" name="male-female" id="male" value="Male">Male
+                        <input type="radio" name="male-female" id="female" value="Female">Female
+                    </div>
+                    <div class="skills">
+                        <label for="skills">Skills :</label>
+                        <input type="checkbox" value="C++" id="cpp" class="checkbox">C++
+                        <input type="checkbox" value="C" id="c" class="checkbox">C
+                        <input type="checkbox" value="HTML" id="html" class="checkbox">HTML
+                        <input type="checkbox" value="CSS" id="css" class="checkbox">CSS
+                    </div>
+                    <div class="button">
+                        <button type="button" id="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="output">
+                <h2>Student Details</h2>
+                <div class="cardContainer" id="cardContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
- 
+
 </html>
